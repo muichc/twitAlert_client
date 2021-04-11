@@ -2,6 +2,7 @@ import React from 'react';
 import '../static/css/landing.css'
 
 const Landing = () => {
+    
     return (
         <div>
             <div className="landing-button">

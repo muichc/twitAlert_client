@@ -1,8 +1,8 @@
-const url = 'https://localhost:5000'
+const url = 'http://localhost:5000'
 
 class AuthModel {
     static register = (data) => {
-        return fetch(`${URL}/auth/register`, {
+        return fetch(`${url}/auth/register`, {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
@@ -14,12 +14,21 @@ class AuthModel {
     }
 
     static login = (data) => {
-        return fetch(`${URL}/auth/login`, {
+        return fetch(`${url}/auth/login`, {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(data)
+        }).then((response) => {
+            console.log(response)
+            return response.json()
+        })
+    }
+    static verify = () => {
+        console.log(`>>> ${localStorage.uid}`)
+        return fetch(`${url}/auth/profile`, {
+            headers: { authorization: `Bearer ${ localStorage.uid }`}
         }).then((response) => {
             return response.json()
         })
