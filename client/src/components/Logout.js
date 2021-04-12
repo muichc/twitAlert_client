@@ -1,10 +1,14 @@
 import React, {useState} from 'react';
-import { Link, Redirect } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import { userState } from '../recoil/atoms';
 import { useSetRecoilState } from 'recoil';
 
+// Bootstrap + CSS
+import Button from 'react-bootstrap/Button';
 
-const Header = (props) => {
+
+
+const Logout = (props) => {
     const setUser = useSetRecoilState(userState);
     const [logout, setLogout] = useState(false)
 
@@ -22,14 +26,12 @@ const Header = (props) => {
     } else {
         return (
             <header>
-                <nav>
-                    <Link to={`/user/profile`}>Profile</Link>
-                    <button onClick = {handleLogOut}>Log Out</button>
-                </nav>
+                <Button onClick = {handleLogOut} variant="outline-warning" className="logout-button">Log Out</Button>
             </header>
+            
         );
     }
     
 }
 
-export default Header;
+export default Logout;

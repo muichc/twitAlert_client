@@ -56,7 +56,7 @@ function Register(props) {
                     />
                 </div>
                 <div>
-                    <label htmlFor='location'>Location</label>
+                    <label htmlFor='location'>Location (Zip code) </label>
                     <input
                         type='text'
                         name='location'
