@@ -1,9 +1,11 @@
 import React from 'react';
+import TweetsContainer from '../container/TweetsContainer';
+
 
 const Dashboard = () => {
     return (
-        <div>
-            <h1>hi</h1>
+        <div className="tweetsContainer">
+            <TweetsContainer />
         </div>
     );
 }

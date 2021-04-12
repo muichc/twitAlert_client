@@ -21,7 +21,6 @@ class AuthModel {
             },
             body: JSON.stringify(data)
         }).then((response) => {
-            console.log(response)
             return response.json()
         })
     }

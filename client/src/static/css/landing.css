@@ -1,118 +1,128 @@
+.btn-outline-warning {
+  color: #F3CE5E;
+  border-color: #F3CE5E;
+}
+
+.btn-outline-warning:hover, .btn-outline-warning:focus, .btn-outline-warning:active, .btn-outline-warning.active, .open > .dropdown-toggle.btn-outline-warning {
+  color: white;
+  background-color: #F3CE5E;
+  border-color: #F3CE5E;
+}
+
 /* Button obtained from this link: https://codepen.io/cassidoo/full/RZOWQb */
-
-
 .landing-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    margin: 20px auto;
-    width: 250px;
-    height: 250px;
-    background: white;
-    border-radius: 75px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
-    font-weight: lighter;
-    letter-spacing: 2px;
-    transition: 1s box-shadow;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 20px auto;
+  width: 250px;
+  height: 250px;
+  background: white;
+  border-radius: 75px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: lighter;
+  letter-spacing: 2px;
+  transition: 1s box-shadow;
 }
 
 .landing-button:hover {
-    box-shadow: 0 5px 35px 0px rgba(0,0,0,.1);
+  box-shadow: 0 5px 35px 0px rgba(0, 0, 0, 0.1);
 }
 
 .landing-button:hover::before, .landing-button:hover::after {
-    display: block;
-    content: '';
-    position: absolute;
-    width: 250px;
-    height: 250px;
-    background: #FDA8CF;
-    border-radius: 75px;
-    z-index: -1;
-    animation: 1s clockwise infinite;
+  display: block;
+  content: "";
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background: #FDA8CF;
+  border-radius: 75px;
+  z-index: -1;
+  animation: 1s clockwise infinite;
 }
 
 .landing-button:hover:after {
-    background: #F3CE5E;
-    animation: 2s counterclockwise infinite;
+  background: #F3CE5E;
+  animation: 2s counterclockwise infinite;
 }
 
 @keyframes clockwise {
-    0% {
-        top: -5px;
-        left: 0;
-    }
-    12% {
-        top: -2px;
-        left: 2px;
-    }
-    25% {
-        top: 0;
-        left: 5px;    
-    }
-    37% {
-        top: 2px;
-        left: 2px;
-    }
-    50% {
-        top: 5px;
-        left: 0;    
-    }
-    62% {
-        top: 2px;
-        left: -2px;
-    }
-    75% {
-        top: 0;
-        left: -5px;
-    }
-    87% {
-        top: -2px;
-        left: -2px;
-    }
-    100% {
-        top: -5px;
-        left: 0;    
-    }
+  0% {
+    top: -5px;
+    left: 0;
+  }
+  12% {
+    top: -2px;
+    left: 2px;
+  }
+  25% {
+    top: 0;
+    left: 5px;
+  }
+  37% {
+    top: 2px;
+    left: 2px;
+  }
+  50% {
+    top: 5px;
+    left: 0;
+  }
+  62% {
+    top: 2px;
+    left: -2px;
+  }
+  75% {
+    top: 0;
+    left: -5px;
+  }
+  87% {
+    top: -2px;
+    left: -2px;
+  }
+  100% {
+    top: -5px;
+    left: 0;
+  }
+}
+@keyframes counterclockwise {
+  0% {
+    top: -5px;
+    right: 0;
+  }
+  12% {
+    top: -2px;
+    right: 2px;
+  }
+  25% {
+    top: 0;
+    right: 5px;
+  }
+  37% {
+    top: 2px;
+    right: 2px;
+  }
+  50% {
+    top: 5px;
+    right: 0;
+  }
+  62% {
+    top: 2px;
+    right: -2px;
+  }
+  75% {
+    top: 0;
+    right: -5px;
+  }
+  87% {
+    top: -2px;
+    right: -2px;
+  }
+  100% {
+    top: -5px;
+    right: 0;
+  }
 }
 
-@keyframes counterclockwise {
-    0% {
-        top: -5px;
-        right: 0;
-    }
-    12% {
-        top: -2px;
-        right: 2px;
-    }
-    25% {
-        top: 0;
-        right: 5px;    
-    }
-    37% {
-        top: 2px;
-        right: 2px;
-    }
-    50% {
-        top: 5px;
-        right: 0;    
-    }
-    62% {
-        top: 2px;
-        right: -2px;
-    }
-    75% {
-        top: 0;
-        right: -5px;
-    }
-    87% {
-        top: -2px;
-        right: -2px;
-    }
-    100% {
-        top: -5px;
-        right: 0;    
-    }
-}
+/*# sourceMappingURL=landing.css.map */

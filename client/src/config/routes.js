@@ -17,7 +17,7 @@ const Routes = () => {
             <Route exact path='/login' component = { Login } />
             { loggedIn && (
                 <Switch> 
-                    <Route path='/user' component={ Dashboard }/>
+                    <Route exact path='/user/dashboard' component={ Dashboard }/>
                 </Switch>
             )}
         </Switch>
