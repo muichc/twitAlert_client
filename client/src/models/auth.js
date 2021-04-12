@@ -25,7 +25,6 @@ class AuthModel {
         })
     }
     static verify = () => {
-        console.log(`>>> ${localStorage.uid}`)
         return fetch(`${url}/auth/profile`, {
             headers: { authorization: `Bearer ${ localStorage.uid }`}
         }).then((response) => {
