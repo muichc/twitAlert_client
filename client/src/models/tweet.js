@@ -1,11 +1,11 @@
-import { useRecoilValue } from 'recoil'
-import{ loggedInState } from '../recoil/selectors'
-
-const url = 'https://localhost:5000'
+const url = 'http://localhost:5000'
 
 class TweetModel {
     static all = () => {
-        return fetch(`${url}/user/tweets`).then(res => res.json())
+        console.log(`HIII, ${localStorage.uid}`)
+        return fetch(`${url}/user/tweets`, {
+            headers: { authorization: `Bearer ${ localStorage.uid }`}
+        }).then(res => res.json())
     }
 
 }
