@@ -9,7 +9,6 @@ import ListGroup from 'react-bootstrap/ListGroup';
 import ListGroupItem from 'react-bootstrap/ListGroupItem';
 
 const Tweets = (props) => {
-    console.log("HELLOOO THESE ARE THE TWEETS", props.tweets)
     const [tweets, setTweets] = useState(props.tweets)
     let tweetsList = [];
     if (props.tweets) {
@@ -19,7 +18,6 @@ const Tweets = (props) => {
             )
         })
     } 
-    console.log(tweetsList)
     return (
         <ListGroup className="d-flex">
             {tweetsList}

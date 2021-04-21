@@ -44,7 +44,7 @@ const UserInfo = () => {
             <p>Location: {city} </p>
             <p>Temperature: {temperature}&#8451;</p>
             <p>Air Quality: {airQualityIndex}, {airQuality}</p>
-            <button className="btn btn-outline-warning profile-button"><a className="profile" href="/user/profile">View Profile</a></button>
+            <button className="btn btn-outline-warning "><a className="profile" href="/user/profile">View Profile</a></button>
         </div>
     );
 }
