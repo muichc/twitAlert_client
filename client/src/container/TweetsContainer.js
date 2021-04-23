@@ -24,9 +24,16 @@ const TweetsContainer = () => {
         {id: "1381295412003414018", text:"@SFAgraduate So many, Tienanmen Square  Soviets finally left Afghanistan Berlin Wall Fell First free elections in Soviet Union history Exxon Valdez Oil Tanker Spill in Alaska 6.9 San Francisco Earthquake that killed 57 people"}
     ];
 
+    // useEffect(function() {
+    //     setTweets(sampleTweetData)
+    // }, [])
+
+    
+
     return (
         <div>
             <Tweets tweets={sampleTweetData}/>
+            {/* <Tweets tweets={tweets}/> */}
         </div>
     );
 }

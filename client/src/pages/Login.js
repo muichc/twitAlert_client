@@ -12,7 +12,6 @@ function Login(props) {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const setUser = useSetRecoilState(userState)
-
     function handleSubmit(event) {
         event.preventDefault()
         AuthModel.login({ email, password }).then((response) => {

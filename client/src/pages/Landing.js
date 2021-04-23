@@ -25,7 +25,6 @@ const Landing = (props) => {
         AuthModel.login({ email, password }).then((response) => {
             localStorage.setItem('uid', response.data.token)
             AuthModel.verify().then((response) => {
-                console.log(response.data)
                 setUser(response.data)
                 props.history.push('/user/dashboard')
             })
