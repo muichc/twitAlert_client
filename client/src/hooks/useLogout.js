@@ -6,7 +6,7 @@ import { Redirect } from 'react-router-dom';
 const useLogout = () => {
     const [logout, setLogout] = useState(false);
     const setUser = useSetRecoilState(userState);
-    console.log("in uselogout hook", logout)
+    // console.log("in uselogout hook", logout)
 
     const handleLogOut = () => {
         localStorage.clear('uid');
@@ -14,18 +14,7 @@ const useLogout = () => {
         setLogout(true);
     }
 
-    useEffect(
-        function() {
-            if (logout) {
-                handleLogOut();
-            }
-        }, [logout]
-    )
-    if (logout) {
-        return <Redirect to='/' />
-    } else {
-        return [logout, handleLogOut];
-    }
+    return [logout, handleLogOut];
     
 }
 

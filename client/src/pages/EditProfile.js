@@ -26,28 +26,17 @@ const EditProfile = (props) => {
     const handleDelete = async (event) => {
         event.preventDefault();
         const response = await AuthModel.deleteProfile({email});
-        console.log(response);
-        console.log("deleted user profile");
-        // setShouldLogout(true);
-        // console.log("is shouldlogout true yet", shouldLogout);
-        setLogout();
+        console.log("Successfully deleted user profile");
+        setShouldLogout(true);
     }
 
-    // const handleLogOut = () => {
-    //     console.log("shouldlogout in handlelogout", shouldLogout);
-    //     localStorage.clear('uid');
-    //     setUser(null);
-    //     setLogout(true);
-    //     console.log("is logout true yet", logout);
-    // }
-
-    // useEffect(
-    //     function() {
-    //         if (shouldLogout) {
-    //             handleLogOut();
-    //         }
-    //     }
-    // )
+    useEffect(
+        function() {
+            if (shouldLogout) {
+                setLogout();
+            }
+        }
+    )
 
 
     
