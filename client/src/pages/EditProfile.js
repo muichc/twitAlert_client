@@ -13,11 +13,12 @@ import Form from 'react-bootstrap/Form';
 
 const EditProfile = (props) => {
     const user = useRecoilValue(userState)
-    const setUser = useSetRecoilState(userState);
     const [shouldLogout, setShouldLogout] = useState(false);
     const [logout, setLogout] = useLogout();
-    // const [logout, setLogout] = useState(false);
     const [email, setEmail] = useState(user.email);
+    const [username, setUsername] = useState(user.username);
+    const [location, setLocation] = useState(user.location);
+    
     const [show, setShow]  = useState(false);
 
     const handleClose = () => setShow(false);

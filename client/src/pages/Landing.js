@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {Link} from 'react-router-dom';
 import { userState } from '../recoil/atoms';
 import { useSetRecoilState } from 'recoil';
 
@@ -54,6 +55,7 @@ const Landing = (props) => {
                             </Form.Group>
                     </Modal.Body>
                     <Modal.Footer>
+                        Don't have an account yet? Register <Link to={'/register'}>here</Link>
                         <Button id="login-button"variant="outline-warning" type="submit">
                             Login
                         </Button>
